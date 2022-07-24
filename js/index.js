@@ -1,26 +1,21 @@
-function ativarContagem() {
-    //document.getElementById('tempo').innerHTML = "Começou a contar!"
-
-    //Ativa a função apenas umavez quando der o tempo especificado!
-    //tempo = setTimeout(function () {
-    //    document.getElementById("tempo").innerHTML = "Executou o setTimeout";
-    // }, 5000);
-
-    tempo = setInterval(function () {
-        let cronometro = document.getElementById('tempo').innerHTML;
-        let soma = parseInt(cronometro) - 1;
-
-        if (soma === 0) {
-            document.getElementById('tempo').innerHTML = "Tempo esgotado";
-            pararContagem;
-        } else {
-            document.getElementById('tempo').innerHTML = soma;
-        }
-    }, 1000)
+//As classes devem ser declaradas antes das chamadas do objeto
+class Carro {
+    constructor(marca, modelo, ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+    buzina() {
+        return this.modelo + " buzinou: Biiiiiiiiiii"
+    }
 }
-function pararContagem() {
-    //clearTimeout(tempo);
-    //document.getElementById("tempo").innerHTML = "Parou a contagem";
-    clearInterval(tempo);
-}
+
+const uno = new Carro("Fiat", "Uno", 2001);
+const gol = new Carro("Volkswagen", "Gol", 2013);
+//console.log(uno);
+//console.log(gol);
+//console.log(gol.buzina());
+console.log(gol)
+gol.ano = 2014;
+console.log(gol)
 
