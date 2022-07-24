@@ -1,24 +1,21 @@
-/* if or else 
-let hora = new Date().getHours();
+/*Switch
 
-if (hora < 12) {
-    alert("Bom dia!");
-} else if (hora < 18) {
-    alert("Boa tarde!");
-} else {
-    alert("Boa noite!");
-}
 */
-function verificar() {
-    let nome = document.getElementById("nome").value;
+function verificarCor() {
+    let cor = document.getElementById("cor").value;
+    cor = cor.toLowerCase();
 
-    if (nome == "" || nome == null) {
-        let p = document.getElementById("teste")
-        p.innerHTML = "O campo não pode ser vazio";
-        p.style.color = "red";
-    } else {
-        let p = document.getElementById("teste")
-        p.innerHTML = "Parabéns tudo certinho";
-        p.style.color = "green";
+    switch (cor) {
+        case "azul":
+            document.body.style.backgroundColor = "blue";
+            break;
+        case "vermelho":
+            document.body.style.backgroundColor = "red";
+            break;
+        case "amarelo":
+            document.body.style.backgroundColor = "yellow";
+            break;
+        default:
+            document.getElementById("teste").innerHTML = "Nenhuma cor disponivel para: " + cor;
     }
 }
