@@ -10,14 +10,29 @@
 <style>
     body {
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .stop {
+        background: tomato;
+        padding: 50px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .start {
+        background: green;
+        padding: 50px;
+        color: white;
+        font-size: 20px;
     }
 </style>
 
 <body>
-    <h1>Aprendendo JavaScript</h1>
-    <p id="teste"></p>
-    <input style="padding: 50px; font-size: 50px;" type="text" id="cor" placeholder="Digite uma cor">
-    <button onclick="verificarCor()" style="padding: 50px;">Verificar</button>
+    <h1>Controle de Tempo</h1>
+    <h2 id="tempo">10</h2>
+    <button onclick="ativarContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Para Contagem</button>
 
     <script src="js/index.js"></script>
 </body>
